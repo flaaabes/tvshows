@@ -25,7 +25,7 @@
     include __DIR__ . '/../3rd_party/Moinax/TvDb/Episode.php';
     use Moinax\TvDb\Client;
     $tvdb = new Client(TVDB_URL, TVDB_API_KEY);
-    #$serverTime = $tvdb->getServerTime();
+    $serverTime = $tvdb->getServerTime();
     #####################################################################
         
     $files = $db->get_incomplete_shows();
