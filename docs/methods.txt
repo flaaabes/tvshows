@@ -1,0 +1,29 @@
+PUBLIC METHODS
+-------------------------------------------------
+
+-- LIBMEDIAOBJECT
+ |-- set_metadata($metakey,$metavalue,[$group=FALSE])
+ |-- load($id)
+ |-- load_by_name($filename)
+ |-- save([$check_existence=TRUE])
+ |-- check_existence()
+ |-- dump_metadata
+
+-- LIBDATABASE
+ |-- get_new_table_id($table)
+ |-- load_object_by_id($table,$id)
+ |-- load_object_by_column($table,$column,$value)
+ |-- load_all_objects($table,$column=FALSE)
+ |-- insert($object,$table)
+ |-- update($object,$table)
+
+-- LIBDIRECTORY($basedir)
+ |-- add_filetype($filetype)
+ |-- load_all_files($path=FALSE)
+
+-- LIBHELPER
+ |-- log($msg)
+
+-- LIBOPTIONS
+ |-- get($option_key)
+ |-- set($option_key,$option_value)

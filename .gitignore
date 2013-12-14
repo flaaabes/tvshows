@@ -1,0 +1,6 @@
+*.log
+test.php
+config/config.inc.php
+.DS_Store
+media_images/banners/graphical/*.jpg
+media_images/banners/text/*.jpg
