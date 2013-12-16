@@ -17,6 +17,7 @@
     
     if(isset($_GET['show'])){
         $tv_show = $db->load_object_by_id('tv_shows',$_GET['show']);
+        $episodes = $db->load_objects_by_column('tv_files','show_id',$_GET['show'],'season_num,episode_num');
     }else{
         $tv_shows = $db->load_all_objects('tv_shows',array('id','banner'));
     }
@@ -28,43 +29,38 @@
     </head>
     <body>
         <div class="wrapper">
-            <div class="box full"><strong>TV-SHOWS</strong></div>
+            <div class="box full"><h1>TV-SHOWS</h1></div>
             <?php if (isset($_GET['show'])) { ?>
                 <div class="one_third">
-                    <div class="box one_third">
-                        <?php echo $tv_show['show_name']; ?>
+                    <div class="box">
+                        <h2><?php echo $tv_show['show_name']; ?></h2>
                     </div>
-                    <div class="box one_third">
+                    <div class="box">
                         <img src="/tvshows/frontend/media_images/banners/<?php echo $tv_show['poster']; ?>">
                     </div>
                 </div>
                 <div class="two_third">
-                    <div class="box two_third">
-                        <strong>Inhalt:</strong><br><br>
-                        <?php echo $tv_show['synopsis']; ?>
+                    <div class="box">
+                        <h2>Inhalt:</h2>
+                        <p><?php echo $tv_show['synopsis']; ?></p>
                     </div>
-                    <div class="box two_third">
-                        <strong>Episoden:</strong>
+                    <div class="box">
+                        <h2>Episoden:</h2>
                     </div>
-                    <div class="smallbox two_third">
-                        1
-                    </div>
+                    <?php foreach ($episodes as $episode) { ?>
+                        <div class="boxsmall episodebox">
+                            <div class="season"><?php echo $episode['season_num']; ?></div>
+                            <div class="episodeinfo">
+                                <p><?php echo $episode['episode_name']; ?><br>
+                                <small><?php echo $episode['filename']; ?></small></p>
+                            </div>
+                            <div class="episodenum"><?php echo $episode['episode_num']; ?></div>
+                        </div>
+                    <?php } ?>
                 </div>
             <?php } else { ?>
-                <div clasS="box full">
-                    <?php                   
-                        $i=1;
-                        foreach($tv_shows as $tv_show){
-                            ?><a href="?show=<?php echo $tv_show['id']; ?>"><?php
-                            if($i%3==0){
-                                ?><img src="/tvshows/frontend/media_images/banners/<?php echo $tv_show['banner']; ?>" class="last"><?php                            
-                            }else{
-                                ?><img src="/tvshows/frontend/media_images/banners/<?php echo $tv_show['banner']; ?>"><?php
-                            }
-                            $i++;
-                            ?></a><?php
-                        }                    
-                    ?>
+                <div clasS="box full showlist">
+                    <?php foreach($tv_shows as $tv_show){ ?><a href="?show=<?php echo $tv_show['id']; ?>"><img src="/tvshows/frontend/media_images/banners/<?php echo $tv_show['banner']; ?>"></a><?php } ?>
                 </div>
             <?php } ?>
         </div>

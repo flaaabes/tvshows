@@ -29,14 +29,41 @@
             return($result);
         }
         
-        public function load_object_by_column($table,$column,$value){
-            $db_obj = mysql_query('SELECT * FROM '.$table.' WHERE `'.$column.'` = "'.$value.'"');
+        public function load_object_by_column($table,$column,$value,$order=FALSE){
+            $orderby = '';
+            if($order){
+                $orderby = ' ORDER BY '.$order;
+            }
+            $statement = 'SELECT * FROM '.$table.' WHERE `'.$column.'` = "'.$value.'"'.$orderby;
+            $db_obj = mysql_query($statement);
             $result = mysql_fetch_array($db_obj,MYSQL_ASSOC);
             return($result);
         }
+
+        public function load_objects_by_column($table,$column,$value,$order=FALSE){
+            $orderby = '';
+            if($order){
+                $orderby = ' ORDER BY '.$order;
+            }
+            $statement = 'SELECT * FROM '.$table.' WHERE `'.$column.'` = "'.$value.'"'.$orderby;
+            $db_obj = mysql_query($statement);
+            while($row = mysql_fetch_array($db_obj,MYSQL_ASSOC)){
+                $rows[] = $row;
+            }
+            return($rows);
+        }
         
-        public function load_all_objects($table,$columns=FALSE){
+        public function load_objects_by_sql($sql){
+            $db_obj = mysql_query($sql) or die($this->helper->log('Error: '.mysql_error()));
+            while($row = mysql_fetch_array($db_obj,MYSQL_ASSOC)){
+                $rows[] = $row;
+            }
+            return($rows);
+        }
+        
+        public function load_all_objects($table,$columns=FALSE,$order=FALSE){
             $column = '*';
+            $orderby = '';
             if($columns){
                 if(is_array($columns)){
                     $column = '';
@@ -48,7 +75,10 @@
                     $column = $columns;
                 }
             }
-            $statement = 'SELECT '.$column.' FROM '.$table;
+            if($order){
+                $orderby = ' ORDER BY '.$order;
+            }
+            $statement = 'SELECT '.$column.' FROM '.$table.$orderby;
             $this->helper->log($statement);
             $db_obj = mysql_query($statement) 
                 or die($this->helper->log('Error: '.$statement.' '.mysql_error()));

@@ -1,12 +1,25 @@
 body                { background-color: #eee;  margin: 0px; padding: 0px; }
 div                 { font-family: tahoma, arial, sans-serif; }
 .wrapper            { float: left; width: 1024px; height: 768px; }
-.box                { float: left; background-color: #fff; border-bottom: 1px solid #ddd; margin: 20px 20px 0px 20px; padding: 20px;}
-.full               { width: 944px; }
+
+.box                { float: left; background-color: #fff; border-bottom: 1px solid #ddd; width: 100%; margin-top: 20px ;}
+.boxsmall           { float: left; background-color: #fff; }
+
+.full               { width: 944px; margin-left:20px;}
 .half               { width: 442px; }
-.one_third          { width: 300px; float: left; }
-.two_third          { margin-left: 0px; width: 583px; float: right; }
-.showimage          { margin-left: 20px; float: left; margin-top: 20px; }
-.half:last-child    { margin-left: 0px; }
-.box img            { margin-right: 16px; margin-bottom: 16px; }
-.box img.last       { margin-right: 0px; }
+
+.one_third          { margin-left: 20px; width: 320px; float: left; }
+.two_third          { margin-left: 20px; width: 600px; float: left; }
+
+.episodebox         { width: 100%; margin-top: 2px; margin-bottom: 2px; }
+.season             { color: #aaa; float: left; font-weight: bold; font-size: 30px; width: 60px; border-right: 3px solid #eee; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
+.episodeinfo        { float: left; border-bottom: 1px solid #ddd; height: 43px; width: 474px; }
+.episodenum         { color: #aaa; float: right; font-weight: bold; font-size: 30px; width: 60px; border-left: 3px solid #eee; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
+
+h1                  { font-size: 16px; font-weight: bold; padding: 10px; margin: 0px; }
+h2                  { font-size: 16px; font-weight: normal; padding: 10px; margin: 0px; }
+.box img            { padding: 10px; }
+p                   { padding: 10px; }
+.episodeinfo p      { margin: 0px; padding-top: 3px; padding-left: 10px; }
+
+.showlist img       { margin: 0px; padding: 0px; margin-top: 10px; margin-left: 10px;}
