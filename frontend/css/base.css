@@ -9,17 +9,22 @@ div                 { font-family: tahoma, arial, sans-serif; }
 .half               { width: 442px; }
 
 .one_third          { margin-left: 20px; width: 320px; float: left; }
-.two_third          { margin-left: 20px; width: 600px; float: left; }
+.two_third          { margin-left: 20px; width: 604px; float: left; }
 
-.episodebox         { width: 100%; margin-top: 2px; margin-bottom: 2px; }
-.season             { color: #aaa; float: left; font-weight: bold; font-size: 30px; width: 60px; border-right: 3px solid #eee; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
+.episodebox         { width: 100%; margin-top: 2px; }
+.season             { color: #aaa; float: left; font-weight: bold; font-size: 30px; width: 60px; border-right: 3px solid green; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
 .episodeinfo        { float: left; border-bottom: 1px solid #ddd; height: 43px; width: 474px; }
-.episodenum         { color: #aaa; float: right; font-weight: bold; font-size: 30px; width: 60px; border-left: 3px solid #eee; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
+.episodenum         { border-left: 3px solid green; color: #aaa; float: right; font-weight: bold; font-size: 30px; width: 60px; height: 43px; line-height: 43px; text-align: center; border-bottom: 1px solid #ddd;}
 
 h1                  { font-size: 16px; font-weight: bold; padding: 10px; margin: 0px; }
 h2                  { font-size: 16px; font-weight: normal; padding: 10px; margin: 0px; }
 .box img            { padding: 10px; }
 p                   { padding: 10px; }
 .episodeinfo p      { margin: 0px; padding-top: 3px; padding-left: 10px; }
-
 .showlist img       { margin: 0px; padding: 0px; margin-top: 10px; margin-left: 10px;}
+.season_link        { float: left; width: 43px; height: 43px; background-color: #fff; line-height:43px; border-bottom: 1px solid #ddd; text-align: center; margin: 0px; margin-right: 3px; margin-top: 2px; }
+.season_link:hover  { background-color: #eee; }
+.season_link a      { font-size: 30px; font-weight: normal; color: #aaa; text-decoration: none; }
+
+.season.na          { border-right: 3px solid red;}
+.episodenum.na      { border-left: 3px solid red;}

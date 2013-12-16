@@ -52,9 +52,15 @@
             }
             return($rows);
         }
+
+        public function load_object_by_sql($sql){
+            $db_obj = mysql_query($sql) or die ($this->helper->log('Error: '.$sql.' -> '.mysql_error()));
+            $row = mysql_fetch_array($db_obj,MYSQL_ASSOC);
+            return($row);
+        }
         
         public function load_objects_by_sql($sql){
-            $db_obj = mysql_query($sql) or die($this->helper->log('Error: '.mysql_error()));
+            $db_obj = mysql_query($sql) or die ($this->helper->log('Error: '.$sql.' -> '.mysql_error()));
             while($row = mysql_fetch_array($db_obj,MYSQL_ASSOC)){
                 $rows[] = $row;
             }
@@ -130,8 +136,23 @@
             while($row = mysql_fetch_array($db_obj,MYSQL_ASSOC))
                 $incomplete_shows[] = $row;
             return $incomplete_shows;
-        }      
+        } 
         
+        
+        public function load_seasons($show_id){
+            $statement = 'SELECT distinct(season_num) FROM tv_files WHERE show_id = '.$show_id.' ORDER BY season_num ASC';
+            return($this->load_objects_by_sql($statement));
+        }    
+        
+        public function load_season($show_id,$season_num){
+            $statement = 'SELECT * FROM tv_files WHERE show_id = '.$show_id.' AND season_num = '.$season_num.' ORDER BY episode_num ASC';
+            return($this->load_objects_by_sql($statement));            
+        } 
+        
+        public function load_episode($show_id,$season_num,$episode_num){
+            $statement = 'SELECT * FROM tv_files WHERE show_id = '.$show_id.' AND season_num = '.$season_num.' AND episode_num = '.$episode_num;
+            return($this->load_object_by_sql($statement));
+        }
     }
     
 ?>
