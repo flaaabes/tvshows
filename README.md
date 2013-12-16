@@ -9,4 +9,4 @@ Very early. Not yet usable.
 
 3rd-Party Credits:
 ------------------
-Fetching TVDB-Data using the AxTvDb written by Michael Maas (https://github.com/AxaliaN/AxTvDb)
+Fetching TVDB-data using the AxTvDb-library written by Michael Maas (https://github.com/AxaliaN/AxTvDb)
