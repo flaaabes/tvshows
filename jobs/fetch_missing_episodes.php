@@ -47,33 +47,5 @@
             }
         }
     }
-    
-    
-    /*
-    $episodes = $db->load_objects_by_sql('SELECT s.tvdb_id, f.id, f.filename FROM tv_files f, tv_shows s WHERE f.show_id = s.id');
-    
-    foreach($episodes as $episode){
-        # FIRST VERSION: EXPECT NAME TO BE LIKE 
-        # <SHOWNAME> - <EPISODE SXXEYY> - <OPTIONAL EPISODE-TITLE>.<EXTENSION>
-        # SIMPLE / DIRTY
-        # EXTRACT HERE AND CREATE METHOD FOR THAT.
 
-        list($show_name,$seasonepisode,$episode_title) = preg_split('/ - /',$episode['filename']);
-        $season = intval(substr($seasonepisode,1,2));
-        $episode_num = intval(substr($seasonepisode,4,2));
-        
-        $file = $db->load_object_by_id('tv_files',$episode['id']);    
-        $data = $tvdb->getEpisode($episode['tvdb_id'],$season,$episode_num,'de');
-        
-        $file['season_num'] = $season;
-        $file['episode_num'] = $episode_num;    
-        $file['episode_name'] = $data->name;
-        $file['episode_synopsis'] = $data->overview;
-        $file['episode_rating'] = $data->rating;
-        $file['episode_thumb'] = $data->thumbnail;
-        
-        $db->update($file,'tv_files');
-        echo ".";
-    }
-    */
 ?>
