@@ -134,7 +134,6 @@ class Serie
      */
     public function __construct($data)
     {
-        var_dump($data);
         $this->id = (int)$data->id;
         $this->language = (string)$data->Language;
         $this->name = (string)$data->SeriesName;

@@ -17,6 +17,11 @@
     $img_basedir = $options->get('banner_directory');
     $tvdb_url    = $options->get('tvdb_url');
     
+    # GET BANNER FOR SHOW
+    $banner = $tvdb->getBanners($tvshow['tvdb_id'],'poster');
+    $tvshow['poster'] = $banner[0]->path;
+    $db->update($tvshow,'tv_shows');
+    
     $db_images = $db->load_all_objects('tv_shows',array('banner'));
     
     foreach($db_images as $image){

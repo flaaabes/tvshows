@@ -43,7 +43,7 @@
        $file['show_id'] = $media_obj['id'];
        
        if(!$media_obj){
-           $data = $tvdb->getSeries($show_name);
+           $data = $tvdb->getSeries($show_name,'de');
            if(empty($data)){
                # NOT FOUND, SET TO -1 AND CONTINUE
                $file['show_id'] = -1;

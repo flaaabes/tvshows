@@ -30,15 +30,25 @@
         <div class="wrapper">
             <div class="box full"><strong>TV-SHOWS</strong></div>
             <?php if (isset($_GET['show'])) { ?>
-                <div class="box one_third">
-                    <?php echo $tv_show['show_name']; ?>
+                <div class="one_third">
+                    <div class="box one_third">
+                        <?php echo $tv_show['show_name']; ?>
+                    </div>
+                    <div class="box one_third">
+                        <img src="/tvshows/frontend/media_images/banners/<?php echo $tv_show['poster']; ?>">
+                    </div>
                 </div>
-                <div class="box one_third">
-                    <?php echo $tv_show['poster']; ?>
-                </div>
-                <div class="box two_third">
-                    <strong>Synopsis:</strong><br>
-                   <?php echo $tv_show['synopsis']; ?>
+                <div class="two_third">
+                    <div class="box two_third">
+                        <strong>Inhalt:</strong><br><br>
+                        <?php echo $tv_show['synopsis']; ?>
+                    </div>
+                    <div class="box two_third">
+                        <strong>Episoden:</strong>
+                    </div>
+                    <div class="smallbox two_third">
+                        1
+                    </div>
                 </div>
             <?php } else { ?>
                 <div clasS="box full">
