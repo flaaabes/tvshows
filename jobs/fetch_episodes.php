@@ -54,43 +54,4 @@
         echo ".";
     }
     
-    /*
-    $i=0;
-    foreach($files as $file){
-
-      
-       $media_obj = $db->load_object_by_column('tv_shows','show_name',$show_name);
-       $file['show_id'] = $media_obj['id'];
-       
-       if(!$media_obj){
-           $data = $tvdb->getSeries($show_name,'de');
-           if(empty($data)){
-               # NOT FOUND, SET TO -1 AND CONTINUE
-               $file['show_id'] = -1;
-               $db->update($file,'tv_files');
-               continue;
-           }
-           # ADD SHOW, UPDATE MEDIA-OBJECT
-           $tvshow['id']        = $db->get_new_table_id('tv_shows');
-           $tvshow['show_name'] = $data[0]->name;
-           if($data[0]->firstAired)
-               $tvshow['date']      = $data[0]->firstAired->format('Y-m-d');
-           $tvshow['tvdb_id']   = $data[0]->id;
-           $tvshow['imdb_id']   = $data[0]->imdbId;
-           $tvshow['banner']    = $data[0]->banner;
-           $tvshow['synopsis']  = $data[0]->overview;
-           $db->insert($tvshow,'tv_shows');
-           $file['show_id'] = $tvshow['id'];
-       }
-       
-       # UPDATE MEDIA-OBJECT
-       $db->update($file,'tv_files');
-       echo ".";
-       if($i%50==0){
-           echo $i."\n";
-       }
-       $i++;
-    }
-    */
-    
 ?>
