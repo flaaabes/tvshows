@@ -17,7 +17,7 @@
     $img_basedir = $options->get('banner_directory');
     $tvdb_url    = $options->get('tvdb_url');
     
-    $db_images = $db->load_all_objects('tv_shows',array('banner'));
+    $db_images = $db->load_all_objects('tv_shows',array('banner','poster'));
     
     foreach($db_images as $image){
         $image_path = $img_basedir.$image['banner'];

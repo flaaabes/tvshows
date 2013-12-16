@@ -4,6 +4,9 @@ div                 { font-family: tahoma, arial, sans-serif; }
 .box                { float: left; background-color: #fff; border-bottom: 1px solid #ddd; margin: 20px 20px 0px 20px; padding: 20px;}
 .full               { width: 944px; }
 .half               { width: 442px; }
+.one_third          { width: 300px; float: left; }
+.two_third          { margin-left: 0px; width: 583px; float: right; }
+.showimage          { margin-left: 20px; float: left; margin-top: 20px; }
 .half:last-child    { margin-left: 0px; }
-.box img            { margin-right: 16px; margin-bottom: 16px;}
-.box img.last       { margin-right: 0px;}
+.box img            { margin-right: 16px; margin-bottom: 16px; }
+.box img.last       { margin-right: 0px; }
