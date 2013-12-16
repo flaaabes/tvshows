@@ -4,3 +4,4 @@ config/config.inc.php
 .DS_Store
 frontend/media_images/banners/graphical/*.jpg
 frontend/media_images/banners/text/*.jpg
+frontend/media_images/banners/posters/*.jpg
