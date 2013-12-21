@@ -1,0 +1,4 @@
+JAVASCRIPT DOCUMENTATION
+====================================
+
+AJAX-Links: <a href="#" class="remote_link" data-method="<method-name>" data-params="param1,param2,param3">
