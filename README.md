@@ -5,7 +5,7 @@ Manage your tv-shows. Focused on german-language data.
 Status:
 -------
 
-Very early. Not yet usable.
+Early. Basic features only.
 
 3rd-Party Credits:
 ------------------
