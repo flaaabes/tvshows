@@ -4,14 +4,32 @@ function ajaxLinks(){
         var method = $(this).data('method');
         var params = $(this).data('params');
         var _this  = this
-        $(this).after('<img class="link_' + unixTS + '" style="margin: 0px; padding: 0px; margin-left: 10px;" src="/tvshows/frontend/images/ajax-loader.gif">');
+        $(this).after('<img style="margin: 0px; padding: 0px; margin-left: 10px;" src="/tvshows/frontend/images/ajax-loader.gif">');
         var res = $.ajax({
           url: "/tvshows/lib/ajax/ajax.php",
           global: false, 
           type: "POST", 
           data: params, 
           cache: false,
-          success: function(){ $(_this).remove(); }
+          success: function(){ $(_this).next('img').remove(); }
+        });
+    });
+}
+
+function ajaxButtons(){
+    $('.remote_button').click(function(){
+        var unixTS = Math.round(+new Date()/1000);
+        var method = $(this).data('method');
+        var params = $(this).data('params');
+        var _this  = this
+        $(this).html('<img src="/tvshows/frontend/images/ajax-loader-green-white.gif">');
+        var res = $.ajax({
+          url: "/tvshows/lib/ajax/ajax.php",
+          global: false, 
+          type: "POST", 
+          data: {m:method,p:params}, 
+          cache: false,
+          success: function(){ $(_this).html('Add'); }
         });
     });
 }

@@ -1,4 +1,6 @@
+<?php include ('../lib/frontend/core.php'); ?>
 <?php include ($themepath.'header.php'); ?>
+
 <div class="box full settingsbox">
     <div>
         Enter name of show: 

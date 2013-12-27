@@ -5,6 +5,7 @@ PUBLIC METHODS
  |-- set_metadata($metakey,$metavalue,[$group=FALSE])
  |-- load($id)
  |-- load_by_name($filename)
+ |-- load_by_showname($showname)
  |-- save([$check_existence=TRUE])
  |-- check_existence()
  |-- dump_metadata

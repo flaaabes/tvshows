@@ -47,8 +47,14 @@
     foreach($data as $show){
         $values['name'] = $show->name;
         $values['description'] = $show->overview;
-        if($show->banner)
-        $values['banner'] = $show->banner;
+        $url = "http://thetvdb.com/banners/_cache/".$show->banner;
+        $values['banner'] = $url;
+        if (false === file_get_contents($url,0,null,0,1) || empty($show->banner)) {
+            $helper->log('Image not found');
+            $values['banner'] = '/tvshows/frontend/images/pixel.gif';
+        }        
+        $values['id'] = $show->id;
         echo $helper->parse($partial_code,$values);
     }
+    echo '<script type="text/javascript">ajaxButtons();</script>';
 ?>

@@ -10,7 +10,7 @@
             <div class="box full">
                 <a href="/tvshows/frontend/" style="text-decoration: none; color: #000; float: left; padding: 10px;"><strong>TV-SHOWS</strong></a>
                 <div style="float: right; padding: 10px;">
-                    <a href="<?php echo $themepath; ?>add.php">Add</a> |
+                    <a href="add.php">Add</a> |
                     <a href="<?php echo $themepath; ?>upcoming.php">Upcoming</a> | 
                     <a href="<?php echo $themepath; ?>settings.php">Settings</a>
                 </div>

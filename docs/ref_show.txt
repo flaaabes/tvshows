@@ -1,0 +1,77 @@
+array(2) {
+  [0]=>
+  object(Moinax\TvDb\Serie)#9 (23) {
+    ["id"]=>
+    int(161461)
+    ["language"]=>
+    string(0) ""
+    ["name"]=>
+    string(15) "Rizzoli & Isles"
+    ["banner"]=>
+    string(23) "graphical/161461-g2.jpg"
+    ["overview"]=>
+    string(574) "Unterschiedlicher könnte ein Team der Bostoner Mordkommission nicht sein: Detective Jane Rizzoli ist rauh, impulsiv, für ihre Schlagfertigkeit berüchtigt – und stets im Dienst.
+
+Freundin und Gerichtsmedizinerin Dr. Maura Isles ist das komplette Gegenteil von Rizzoli. Ruhig, sachlich und jederzeit von Kopf bis Fuß gestylt, zelebriert sie ihren Beruf mit Stil, Stilettos - und höchster Sorgfalt.
+
+So unterschiedlich die Freundinnen sind, so außergewöhnlich gut ergänzen sie sich bei der Aufklärung von Mordfällen - und ergeben zusammen eine explosive Mischung. "
+    ["firstAired"]=>
+    object(DateTime)#10 (3) {
+      ["date"]=>
+      string(19) "2010-07-12 00:00:00"
+      ["timezone_type"]=>
+      int(3)
+      ["timezone"]=>
+      string(13) "Europe/Berlin"
+    }
+    ["imdbId"]=>
+    string(9) "tt1551632"
+    ["actors"]=>
+    array(0) {
+    }
+    ["airsDayOfWeek"]=>
+    string(0) ""
+    ["airsTime"]=>
+    string(0) ""
+    ["contentRating"]=>
+    string(0) ""
+    ["genres"]=>
+    array(0) {
+    }
+    ["network"]=>
+    string(3) "TNT"
+    ["rating"]=>
+    string(0) ""
+    ["ratingCount"]=>
+    int(0)
+    ["runtime"]=>
+    int(0)
+    ["status"]=>
+    string(0) ""
+    ["added"]=>
+    object(DateTime)#11 (3) {
+      ["date"]=>
+      string(19) "2013-12-27 11:31:48"
+      ["timezone_type"]=>
+      int(3)
+      ["timezone"]=>
+      string(13) "Europe/Berlin"
+    }
+    ["addedBy"]=>
+    int(0)
+    ["fanArt"]=>
+    string(0) ""
+    ["lastUpdated"]=>
+    object(DateTime)#12 (3) {
+      ["date"]=>
+      string(19) "1970-01-01 00:00:00"
+      ["timezone_type"]=>
+      int(1)
+      ["timezone"]=>
+      string(6) "+00:00"
+    }
+    ["poster"]=>
+    string(0) ""
+    ["zap2ItId"]=>
+    string(10) "SH01279465"
+  }

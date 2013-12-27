@@ -35,4 +35,14 @@ p                   { padding: 10px; }
 a                   { text-decoration: none; color: #000; }
 
 .searchresultbox    { margin-top: 2px; margin-left: 20px; }
-.searchresultbox div { padding: 10px; }
+.searchresultbox div:first-child { padding: 10px; width: 800px; float: left;}
+.searchresultbox div:last-child { padding: 10px; float: right;}
+
+.remote_button { display: block; float: right; padding-left: 8px; padding-right: 8px; padding-top: 4px; padding-bottom: 4px; background-color: #5cb85c;
+    -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; color: #fff; font-size: 12px; height: 43px; min-width: 43px; text-align: center;
+    line-height: 43px; font-weight: bold;
+}
+
+.remote_button img {
+    padding-top: 13px;
+}
